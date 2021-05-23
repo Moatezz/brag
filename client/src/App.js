@@ -4,7 +4,7 @@ function App() {
   return (
     <>
       <Navigation />
-      {/* Here goe ssscontent */}
+      {/* Herestst goe ssscontent */}
       <div id="page"></div>
     </>
   );
