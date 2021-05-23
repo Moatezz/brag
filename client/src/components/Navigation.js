@@ -8,9 +8,9 @@ import {
   makeStyles,
   Toolbar,
 } from '@material-ui/core';
+import { lightBlue } from '@material-ui/core/colors';
 //Icons
 import { CgProfile } from 'react-icons/cg';
-import { MdNotificationsNone } from 'react-icons/md';
 import { BsFillInboxFill } from 'react-icons/bs';
 import { RiHome4Line } from 'react-icons/ri';
 import { TiGroupOutline } from 'react-icons/ti';
@@ -20,11 +20,12 @@ import Notification from './Notification';
 
 const useStyle = makeStyles((theme) => ({
   icons: {
-    color: 'white',
+    color: theme.palette.primary.light,
     fontSize: theme.spacing(3),
   },
   search: {
-    backgroundColor: '#ffffff10',
+    backgroundColor: theme.palette.primary.light,
+    color: theme.palette.primary.contrastText,
     padding: theme.spacing(0, 2),
     borderRadius: theme.spacing(1),
     float: 'right',
