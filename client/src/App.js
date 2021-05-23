@@ -4,7 +4,7 @@ function App() {
   return (
     <>
       <Navigation />
-      {/* Here goes the content */}
+      {/* Here goes the econtent */}
       <div id="page"></div>
     </>
   );
