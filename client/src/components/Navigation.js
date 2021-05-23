@@ -50,14 +50,14 @@ function Navigation() {
               <CgProfile className={classes.icons} />
             </IconButton>
             {/* Notifications */}
-
             <Notification className={classes.icons} />
-
+            <IconButton>
+              <MdNotificationsNone className={classes.icons} />
+            </IconButton>
             {/* Groups */}
             <IconButton>
               <TiGroupOutline className={classes.icons} />
             </IconButton>
-
             {/* Inbox */}
             <IconButton>
               <BsFillInboxFill className={classes.icons} />
