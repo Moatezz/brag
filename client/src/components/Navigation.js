@@ -51,9 +51,7 @@ function Navigation() {
             </IconButton>
             {/* Notifications */}
             <Notification className={classes.icons} />
-            <IconButton>
-              <MdNotificationsNone className={classes.icons} />
-            </IconButton>
+
             {/* Groups */}
             <IconButton>
               <TiGroupOutline className={classes.icons} />
