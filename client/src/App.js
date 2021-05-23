@@ -4,6 +4,7 @@ function App() {
   return (
     <>
       <Navigation />
+      <div></div>
     </>
   );
 }
