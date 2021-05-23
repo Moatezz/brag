@@ -4,7 +4,8 @@ function App() {
   return (
     <>
       <Navigation />
-      <div></div>
+
+      <div id="page"></div>
     </>
   );
 }
