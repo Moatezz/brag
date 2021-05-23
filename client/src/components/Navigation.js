@@ -16,6 +16,7 @@ import { RiHome4Line } from 'react-icons/ri';
 import { TiGroupOutline } from 'react-icons/ti';
 import { GoSettings } from 'react-icons/go';
 import { BiLogOutCircle } from 'react-icons/bi';
+import Notification from './Notification';
 
 const useStyle = makeStyles((theme) => ({
   icons: {
@@ -49,9 +50,9 @@ function Navigation() {
               <CgProfile className={classes.icons} />
             </IconButton>
             {/* Notifications */}
-            <IconButton>
-              <MdNotificationsNone className={classes.icons} />
-            </IconButton>
+
+            <Notification className={classes.icons} />
+
             {/* Groups */}
             <IconButton>
               <TiGroupOutline className={classes.icons} />
