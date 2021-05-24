@@ -29,6 +29,13 @@
       "type": "boolean",
       "default": true,
       "required": true
+    },
+    "members": {
+      "plugin": "users-permissions",
+      "collection": "user"
+    },
+    "posts": {
+      "collection": "post"
     }
   }
 }
