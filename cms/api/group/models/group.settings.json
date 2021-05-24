@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "groups",
+  "info": {
+    "name": "group",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "unique": true,
+      "minLength": 6,
+      "maxLength": 12,
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "minLength": 24,
+      "maxLength": 64,
+      "required": true
+    },
+    "isPublic": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "members": {
+      "plugin": "users-permissions",
+      "collection": "user"
+    },
+    "posts": {
+      "via": "group",
+      "collection": "post"
+    }
+  }
+}
