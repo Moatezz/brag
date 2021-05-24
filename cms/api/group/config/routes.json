@@ -18,7 +18,7 @@
     },
     {
       "method": "GET",
-      "path": "/groups/:id",
+      "path": "/groups/:name",
       "handler": "group.findOne",
       "config": {
         "policies": []
@@ -48,5 +48,6 @@
         "policies": []
       }
     }
+
   ]
 }
