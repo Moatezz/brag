@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "posts",
+  "info": {
+    "name": "post"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "post": {
+      "type": "component",
+      "repeatable": true,
+      "component": "post.post"
+    }
+  }
+}
