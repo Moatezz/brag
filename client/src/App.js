@@ -4,7 +4,6 @@ function App() {
   return (
     <>
       <Navigation />
-      {/* Herestst goe ssscontent */}
       <div id="page"></div>
     </>
   );
