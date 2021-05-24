@@ -17,6 +17,10 @@
     },
     "content": {
       "type": "text"
+    },
+    "group": {
+      "model": "group",
+      "via": "posts"
     }
   }
 }

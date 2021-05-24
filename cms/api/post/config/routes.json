@@ -18,7 +18,7 @@
     },
     {
       "method": "GET",
-      "path": "/posts/:id",
+      "path": "posts/:id",
       "handler": "post.findOne",
       "config": {
         "policies": []
@@ -26,7 +26,7 @@
     },
     {
       "method": "POST",
-      "path": "/posts",
+      "path": "/:groups/posts",
       "handler": "post.create",
       "config": {
         "policies": []
@@ -45,6 +45,14 @@
       "path": "/posts/:id",
       "handler": "post.delete",
       "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/ponnsts/:groupname",
+      "handler": "post.kill",
+        "config": {
         "policies": []
       }
     }

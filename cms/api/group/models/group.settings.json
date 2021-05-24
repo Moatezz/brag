@@ -35,6 +35,7 @@
       "collection": "user"
     },
     "posts": {
+      "via": "group",
       "collection": "post"
     }
   }
