@@ -1,10 +1,10 @@
 import React from 'react';
-import Navigation from '../Navigation';
+import CardPost from '../CardPost';
 
 function Group() {
   return (
     <>
-      <Navigation />
+      <CardPost />
     </>
   );
 }
