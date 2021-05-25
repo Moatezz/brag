@@ -1,11 +1,6 @@
-<<<<<<< HEAD
 import Navigation from './components/Navigation';
-// Hi there you
-=======
-//import Navigation from './components/Navigation';
 import LandingPage from './components/Pages/LandingPage';
-// Hi there you s
->>>>>>> React
+// Hi there you
 function App() {
   return (
     <>
