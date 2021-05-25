@@ -1,5 +1,6 @@
 import { Avatar, Box, Paper, Typography, Button } from '@material-ui/core';
 import React from 'react';
+import DottedMenu from './DottedMenu';
 
 function CardGroup() {
   return (
@@ -10,6 +11,7 @@ function CardGroup() {
           <Typography>Name</Typography>
           <Button>Join</Button>
         </Box>
+        <DottedMenu />
       </Box>
     </Paper>
   );
