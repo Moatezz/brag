@@ -55,7 +55,9 @@ function CardGroup() {
             Join
           </Button>
         </Box>
-        <DottedMenu />
+        <Box display="flex" alignItems="center">
+          <DottedMenu />
+        </Box>
       </Box>
 
       <Box>
