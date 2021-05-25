@@ -1,7 +1,7 @@
 //import Navigation from './components/Navigation';
 
 //import LandingPage from './components/Pages/LandingPage';
-import Signup from './components/Pages/Signup';
+import Login from './components/Pages/Login';
 // Hi there you ss
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
     <>
       {/* <Navigation /> */}
       <div id="page">
-        <Signup />
+        <Login />
       </div>
     </>
   );
