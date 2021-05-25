@@ -10,9 +10,14 @@ import {
   IconButton,
   TextField,
 } from '@material-ui/core';
+import { RiShareLine } from 'react-icons/ri';
+import { BiDownvote, BiUpvote } from 'react-icons/bi';
+import { GoCommentDiscussion } from 'react-icons/go';
 const useStyle = makeStyles((theme) => ({
   root: {
+    //remove
     margin: theme.spacing(10),
+    width: 'min-content',
   },
   head: {},
   body: {},
@@ -23,7 +28,7 @@ function CardPost() {
   const classes = useStyle();
   return (
     <Paper variant="outlined" className={classes.root}>
-      <Box className={classes.head}>
+      <Box className={classes.head} display="flex">
         <Avatar>U</Avatar>
         <Box className={classes.nameContainer}>
           <Typography>JamesMay24</Typography>
@@ -39,10 +44,26 @@ function CardPost() {
         </Typography>
       </Box>
       <Divider />
-      <Box className={classes.bottom}>
-        <IconButton></IconButton>
+      <Box className={classes.bottom} display="flex">
+        <IconButton>
+          <BiDownvote />
+        </IconButton>
+        <IconButton>
+          <BiUpvote />
+        </IconButton>
+
+        <Avatar>u</Avatar>
+        <Avatar>u</Avatar>
+        <Avatar>u</Avatar>
+
+        <IconButton>
+          <GoCommentDiscussion />
+        </IconButton>
+        <IconButton>
+          <RiShareLine />
+        </IconButton>
       </Box>
-      <Box className={classes.comment}>
+      <Box className={classes.comment} display="flex">
         <Avatar>U</Avatar>
         <TextField variant="outlined" helperText="Comment something..." />
       </Box>
