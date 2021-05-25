@@ -17,15 +17,19 @@ const useStyle = makeStyles((theme) => ({
     margin: theme.spacing(10),
   },
   topContainer: {
-    backgroundColor: theme.palette.info.light,
+    backgroundColor: theme.palette.grey[300],
   },
   avatar: {
     height: theme.spacing(10),
     width: theme.spacing(10),
     margin: theme.spacing(2),
+    border: '3px solid ' + theme.palette.common.white,
   },
   name: {
     fontSize: theme.spacing(3),
+    fontFamily: 'Cairo',
+    color: theme.palette.grey[800],
+    marginBottom: theme.spacing(1),
   },
   container: {
     margin: theme.spacing(0, 2),
