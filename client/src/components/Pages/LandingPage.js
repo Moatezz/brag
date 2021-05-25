@@ -58,6 +58,9 @@ function LandingPage() {
           SIGN UP
         </Button>
       </Box>
+      <Typography className={classes.typography}>
+        You have an account? Sign In
+      </Typography>
     </Box>
   );
 }
