@@ -8,7 +8,7 @@ import {
   Divider,
 } from '@material-ui/core';
 import React from 'react';
-import DottedMenu from './DottedMenu';
+import DottedMenu, { Description } from './DottedMenu';
 
 const useStyle = makeStyles((theme) => ({
   root: {
@@ -64,11 +64,8 @@ function CardGroup() {
         </Box>
       </Box>
       <Divider />
-      <Box id="cardGroupDescriptionArea">
-        <Typography className={classes.description}>
-          dhashdiaendioatnd asrit nairnti rss sssf ss earnst aitnsi etn isetn
-          asrit nairnti earnst aitnsi etn isetn
-        </Typography>
+      <Box id="cardGroupDescriptionArea" className={classes.description}>
+        <Description />
       </Box>
     </Paper>
   );
