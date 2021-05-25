@@ -1,15 +1,12 @@
-//import Navigation from './components/Navigation';
-
 //import LandingPage from './components/Pages/LandingPage';
-import Login from './components/Pages/Login';
+import Home from './components/Pages/Home';
 // Hi there you ss
 
 function App() {
   return (
     <>
-      {/* <Navigation /> */}
       <div id="page">
-        <Login />
+        <Home />
       </div>
     </>
   );
