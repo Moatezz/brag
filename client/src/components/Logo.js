@@ -1,16 +1,16 @@
 import React from 'react';
 
-function Logo(props) {
-  if (props.variant === 'big')
+function Logo({ variant, specs }) {
+  if (variant === 'big')
     return (
       <>
         <img src="/logo.svg" alt="logo" height="300px" width="300px" />
       </>
     );
-  if (props.variant === 'min')
+  if (variant === 'min')
     return (
       <>
-        <img src="/logo-min.svg" alt="logo-min" height="100px" width="100px" />
+        <img src="/logo-min.svg" alt="logo-min" height={specs} width={specs} />
       </>
     );
 }
