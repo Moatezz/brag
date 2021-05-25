@@ -1,8 +1,21 @@
 import React, { useState } from 'react';
 import { BiDotsVerticalRounded } from 'react-icons/bi';
-import { IconButton, Menu, MenuItem, Typography } from '@material-ui/core';
+import {
+  IconButton,
+  makeStyles,
+  Menu,
+  MenuItem,
+  Typography,
+} from '@material-ui/core';
 
+const useStyle = makeStyles({
+  dots: {
+    height: 'fit-content',
+    width: 'fit-content',
+  },
+});
 function DottedMenu() {
+  const classes = useStyle();
   const [anchorEl, setAnchorEl] = useState(null);
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -13,7 +26,7 @@ function DottedMenu() {
   };
   return (
     <>
-      <IconButton onClick={handleClick}>
+      <IconButton className={classes.dots} onClick={handleClick}>
         <BiDotsVerticalRounded />
       </IconButton>
       <Menu
