@@ -1,13 +1,6 @@
-<<<<<<< HEAD
-import {
-  Box,
-  Button,
-  Divider,
-  makeStyles,
-  Typography,
-} from '@material-ui/core';
-import Logo from '../Logo';
 import React from 'react';
+import { Box, Button, makeStyles, Typography } from '@material-ui/core';
+import Logo from '../Logo';
 
 const useStyle = makeStyles((theme) => ({
   root: {
@@ -64,12 +57,5 @@ function LandingPage() {
       </Typography>
     </Box>
   );
-=======
-import React from 'react';
-
-function LandingPage() {
-  return <div></div>;
->>>>>>> React
 }
-
 export default LandingPage;
