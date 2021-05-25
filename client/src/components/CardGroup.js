@@ -63,9 +63,8 @@ function CardGroup() {
           <DottedMenu />
         </Box>
       </Box>
-
-      <Box>
-        <Divider />
+      <Divider />
+      <Box id="cardGroupDescriptionArea">
         <Typography className={classes.description}>
           dhashdiaendioatnd asrit nairnti rss sssf ss earnst aitnsi etn isetn
           asrit nairnti earnst aitnsi etn isetn
