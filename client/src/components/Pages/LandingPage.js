@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {
   Box,
   Button,
@@ -63,6 +64,12 @@ function LandingPage() {
       </Typography>
     </Box>
   );
+=======
+import React from 'react';
+
+function LandingPage() {
+  return <div></div>;
+>>>>>>> React
 }
 
 export default LandingPage;
