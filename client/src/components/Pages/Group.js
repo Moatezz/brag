@@ -1,7 +1,12 @@
 import React from 'react';
+import Navigation from '../Navigation';
 
 function Group() {
-  return <div></div>;
+  return (
+    <>
+      <Navigation />
+    </>
+  );
 }
 
 export default Group;
