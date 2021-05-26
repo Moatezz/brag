@@ -18,44 +18,45 @@ const useStyle = makeStyles((theme) => ({
   root: {
     //remove
     margin: theme.spacing(10),
+    ////////////////
     width: 'min-content',
     padding: theme.spacing(1),
   },
-  headSection: {
-    avatar: {},
-    nameContainer: {},
-    name: {},
-    date: {},
+  headSection: {},
+  //children
+  avatar: {
+    height: theme.spacing(8),
+    width: theme.spacing(8),
   },
-
+  nameContainer: {},
+  //children
+  name: {},
+  date: {},
   contentSection: {},
-  interactionsSection: {
-    votes: {},
-    recentInteractionsContainer: {},
-    recentInteractions: {},
-    comments: {},
-    share: {},
-  },
-
-  commentingSection: {
-    avatar: {},
-    textField: {},
-    submit: {},
-  },
+  ////////////////
+  interactionsSection: {},
+  //children
+  votes: {},
+  recentInteractionsContainer: {},
+  recentInteractions: {},
+  comments: {},
+  share: {},
+  ////////////////
+  commentingSection: {},
+  //Children
+  avatarComment: {},
+  textField: {},
+  submit: {},
 }));
 function CardPost() {
   const classes = useStyle();
   return (
     <Paper variant="outlined" className={classes.root}>
       <Box className={classes.headSection} display="flex">
-        <Avatar className={classes.headSection.avatar}>U</Avatar>
-        <Box className={classes.headSection.nameContainer}>
-          <Typography className={classes.headSection.name}>
-            JamesMay24
-          </Typography>
-          <Typography className={classes.headSection.date}>
-            14 Hours ago
-          </Typography>
+        <Avatar className={classes.avatar}>U</Avatar>
+        <Box className={classes.nameContainer}>
+          <Typography className={classes.name}>JamesMay24</Typography>
+          <Typography className={classes.date}>14 Hours ago</Typography>
         </Box>
         <DottedMenu />
       </Box>
@@ -72,7 +73,7 @@ function CardPost() {
       </Box>
       <Divider />
       <Box className={classes.interactionsSection} display="flex">
-        <Box className={classes.interactionsSection.votes} display="flex">
+        <Box className={classes.votes} display="flex">
           <IconButton>
             <BiDownvote />
           </IconButton>
@@ -80,35 +81,27 @@ function CardPost() {
             <BiUpvote />
           </IconButton>
         </Box>
-        <Box
-          className={classes.interactionsSection.recentInteractionsContainer}
-        >
-          <Avatar className={classes.interactionsSection.recentInteractions}>
-            u
-          </Avatar>
-          <Avatar className={classes.interactionsSection.recentInteractions}>
-            u
-          </Avatar>
-          <Avatar className={classes.interactionsSection.recentInteractions}>
-            u
-          </Avatar>
+        <Box className={classes.recentInteractionsContainer} display="flex">
+          <Avatar className={classes.recentInteractions}>u</Avatar>
+          <Avatar className={classes.recentInteractions}>u</Avatar>
+          <Avatar className={classes.recentInteractions}>u</Avatar>
         </Box>
 
-        <IconButton className={classes.interactionsSection.comments}>
+        <IconButton className={classes.comments}>
           <GoCommentDiscussion />
         </IconButton>
-        <IconButton className={classes.interactionsSection.share}>
+        <IconButton className={classes.share}>
           <RiShareLine />
         </IconButton>
       </Box>
       <Box className={classes.commentingSection} display="flex">
-        <Avatar className={classes.commentingSection.avatar}>U</Avatar>
+        <Avatar className={classes.avatarComment}>U</Avatar>
         <TextField
-          className={classes.commentingSection.textField}
+          className={classes.textField}
           variant="outlined"
           helperText="Comment something..."
         />
-        <IconButton className={classes.commentingSection.submit}>
+        <IconButton className={classes.submit}>
           <IoSend />
         </IconButton>
       </Box>
