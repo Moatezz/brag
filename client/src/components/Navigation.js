@@ -8,15 +8,14 @@ import {
   makeStyles,
   Toolbar,
 } from '@material-ui/core';
-import { lightBlue } from '@material-ui/core/colors';
 //Icons
-import { CgProfile } from 'react-icons/cg';
 import { BsFillInboxFill } from 'react-icons/bs';
 import { RiHome4Line } from 'react-icons/ri';
 import { TiGroupOutline } from 'react-icons/ti';
 import { GoSettings } from 'react-icons/go';
 import { BiLogOutCircle } from 'react-icons/bi';
 import Notification from './Notification';
+import Profile from './Profile';
 
 const useStyle = makeStyles((theme) => ({
   icons: {
@@ -47,9 +46,7 @@ function Navigation() {
               <RiHome4Line className={classes.icons} />
             </IconButton>
             {/* Profile */}
-            <IconButton>
-              <CgProfile className={classes.icons} />
-            </IconButton>
+            <Profile className={classes.icons} />
             {/* Notifications */}
             <Notification className={classes.icons} />
 
