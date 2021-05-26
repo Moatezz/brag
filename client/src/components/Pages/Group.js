@@ -9,7 +9,15 @@ const useStyle = makeStyles((theme) => ({
   root: {
     marginTop: theme.spacing(10),
   },
-  main: {},
+  mainContainer: {
+    backgroundColor: theme.palette.grey[200],
+  },
+  main: {
+    padding: theme.spacing(0, 1),
+  },
+  postContainer: {
+    paddingBottom: theme.spacing(5),
+  },
 }));
 
 function Group() {
@@ -19,15 +27,36 @@ function Group() {
       <Navigation />
       <Grid container xs={12} className={classes.root} direction="row">
         <Grid item xs={3}>
-          <InfoGroup />
-        </Grid>
-        <Grid item xs={6}>
-          <Paper className={classes.main}>
-            <CardPost />
+          <Paper variant="outlined">
+            <InfoGroup />
           </Paper>
         </Grid>
+        <Grid item xs={6}>
+          <Box
+            className={classes.mainContainer}
+            display="flex"
+            justifyContent="center"
+          >
+            <Paper className={classes.main} elevation={3}>
+              <Box className={classes.postContainer}>
+                <CardPost />
+              </Box>
+              <Box className={classes.postContainer}>
+                <CardPost />
+              </Box>
+              <Box className={classes.postContainer}>
+                <CardPost />
+              </Box>
+              <Box className={classes.postContainer}>
+                <CardPost />
+              </Box>
+            </Paper>
+          </Box>
+        </Grid>
         <Grid item xs={3}>
-          <OnlineNow />
+          <Paper variant="outlined">
+            <OnlineNow />
+          </Paper>
         </Grid>
       </Grid>
     </Box>
