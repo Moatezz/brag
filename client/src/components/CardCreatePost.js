@@ -6,8 +6,11 @@ import {
   TextField,
   Divider,
   Button,
+  Dialog,
+  DialogTitle,
+  DialogContent,
 } from '@material-ui/core';
-import React from 'react';
+import React, { useState } from 'react';
 const useStyle = makeStyles((theme) => ({
   root: {},
   container: {},
@@ -35,6 +38,14 @@ const useStyle = makeStyles((theme) => ({
   },
 }));
 function CardCreatePost() {
+  const [open, setOpen] = useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+  const handleClose = () => {
+    setOpen(false);
+  };
   const classes = useStyle();
   return (
     <Box className={classes.root}>
@@ -49,6 +60,7 @@ function CardCreatePost() {
           <TextField
             className={classes.textField}
             variant="outlined"
+            onClick={handleClickOpen}
           ></TextField>
         </Box>
         <Divider className={classes.divider} light />
@@ -63,6 +75,10 @@ function CardCreatePost() {
           <Button className={classes.button}>Filler</Button>
         </Box>
       </Paper>
+      <Dialog onClose={handleClose} open={open}>
+        <DialogTitle id="simple-dialog-title">Set backup account</DialogTitle>
+        <DialogContent>Hi there</DialogContent>
+      </Dialog>
     </Box>
   );
 }
