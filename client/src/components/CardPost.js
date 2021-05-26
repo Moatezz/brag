@@ -21,7 +21,9 @@ const useStyle = makeStyles((theme) => ({
     ////////////////
     width: 'min-content',
   },
-  headSection: {},
+  headSection: {
+    backgroundColor: theme.palette.grey[300],
+  },
   //children
   avatar: {
     height: theme.spacing(8),
@@ -29,19 +31,27 @@ const useStyle = makeStyles((theme) => ({
     margin: theme.spacing(1),
   },
   nameContainer: {
-    marginRight: theme.spacing(30),
+    flexGrow: 1,
   },
   //children
-  name: {},
+  name: {
+    fontFamily: 'Cairo',
+    color: theme.palette.grey[700],
+  },
   date: {
+    fontFamily: 'Cairo',
     marginTop: theme.spacing(1),
     fontSize: theme.spacing(1.4),
+    color: theme.palette.grey[500],
   },
   contentSection: {
     margin: theme.spacing(2),
+    color: theme.palette.grey[700],
   },
   ////////////////
-  interactionsSection: {},
+  interactionsSection: {
+    backgroundColor: theme.palette.grey[300],
+  },
   //children
   votes: {
     padding: 0,
@@ -49,11 +59,13 @@ const useStyle = makeStyles((theme) => ({
   //children
   upVote: {
     fontSize: theme.spacing(4),
+    color: theme.palette.primary.light,
   },
   downVote: {
     marginLeft: theme.spacing(-4),
     marginTop: theme.spacing(2.5),
     fontSize: theme.spacing(4),
+    color: theme.palette.secondary.light,
   },
 
   recentInteractionsContainer: {},
@@ -66,17 +78,27 @@ const useStyle = makeStyles((theme) => ({
   comments: {},
   share: {},
   ////////////////
-  commentingSection: {},
+  commentingSection: {
+    padding: theme.spacing(1, 0),
+    backgroundColor: theme.palette.grey[300],
+  },
   //Children
-  avatarComment: {},
-  textField: {},
-  submit: {},
+  avatarComment: {
+    margin: theme.spacing(1),
+  },
+  textField: {
+    flexGrow: 1,
+    backgroundColor: theme.palette.common.white,
+  },
+  submit: {
+    color: theme.palette.primary.main,
+  },
 }));
 function CardPost() {
   const classes = useStyle();
   return (
     <Paper variant="outlined" className={classes.root}>
-      <Box className={classes.headSection} display="flex">
+      <Box className={classes.headSection} display="flex" alignItems="center">
         <Avatar className={classes.avatar}>U</Avatar>
         <Box
           className={classes.nameContainer}
@@ -87,10 +109,8 @@ function CardPost() {
           <Typography className={classes.name}>JamesMay24</Typography>
           <Typography className={classes.date}>14 Hours ago</Typography>
         </Box>
-        <Box display="flex" alignItems="center">
-          {' '}
-          <DottedMenu />
-        </Box>
+
+        <DottedMenu />
       </Box>
       <Divider />
       <Box className={classes.contentSection}>
@@ -110,11 +130,11 @@ function CardPost() {
         justifyContent="space-between"
       >
         <Box className={classes.votes} display="flex">
-          <IconButton className={classes.upVote}>
-            <BiUpvote />
+          <IconButton>
+            <BiUpvote className={classes.upVote} />
           </IconButton>
-          <IconButton className={classes.downVote}>
-            <BiDownvote />
+          <IconButton>
+            <BiDownvote className={classes.downVote} />
           </IconButton>
         </Box>
         <Box
@@ -142,14 +162,15 @@ function CardPost() {
           </IconButton>
         </Box>
       </Box>
-      <Divider />
-      <Box className={classes.commentingSection} display="flex">
+      <Divider light />
+      <Box
+        className={classes.commentingSection}
+        display="flex"
+        justifyContent="space-between"
+        alignItems="center"
+      >
         <Avatar className={classes.avatarComment}>U</Avatar>
-        <TextField
-          className={classes.textField}
-          variant="outlined"
-          helperText="Comment something..."
-        />
+        <TextField className={classes.textField} variant="outlined" />
         <IconButton className={classes.submit}>
           <IoSend />
         </IconButton>
