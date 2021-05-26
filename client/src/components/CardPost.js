@@ -18,11 +18,25 @@ const useStyle = makeStyles((theme) => ({
     //remove
     margin: theme.spacing(10),
     width: 'min-content',
+    padding: theme.spacing(1),
   },
-  head: {},
+  head: {
+    avatar: {},
+    nameContainer: {},
+  },
+
   body: {},
-  bottom: {},
-  comment: {},
+  bottom: {
+    voting: {},
+    recentInteractions: {},
+    comments: {},
+    sharing: {},
+  },
+  comment: {
+    avatar: {},
+    textSield: {},
+    submit: {},
+  },
 }));
 function CardPost() {
   const classes = useStyle();
