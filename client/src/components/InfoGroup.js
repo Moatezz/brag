@@ -1,8 +1,29 @@
-import { Box } from '@material-ui/core';
-import React from 'react';
+import { Box, Tabs, Tab } from '@material-ui/core';
+import React, { useState } from 'react';
+import InfoGroupOverview from './InfoGroupOverview';
 
 function InfoGroup() {
-  return <Box></Box>;
+  const [value, setValue] = useState(0);
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
+  return (
+    <Box>
+      <Tabs
+        value={value}
+        onChange={handleChange}
+        indicatorColor="primary"
+        textColor="primary"
+        centered
+      >
+        <Tab label="Overview" />
+        <Tab label="Rules" />
+        <Tab label="About" />
+      </Tabs>
+      <InfoGroupOverview />
+    </Box>
+  );
 }
 
 export default InfoGroup;
