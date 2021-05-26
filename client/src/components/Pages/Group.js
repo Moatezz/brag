@@ -18,15 +18,15 @@ function Group() {
     <Box>
       <Navigation />
       <Grid container xs={12} className={classes.root} direction="row">
-        <Grid item xs={4}>
+        <Grid item xs={3}>
           <InfoGroup />
         </Grid>
-        <Grid item xs={4}>
+        <Grid item xs={6}>
           <Paper className={classes.main}>
             <CardPost />
           </Paper>
         </Grid>
-        <Grid item xs={4}>
+        <Grid item xs={3}>
           <OnlineNow />
         </Grid>
       </Grid>
