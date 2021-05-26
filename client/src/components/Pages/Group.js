@@ -4,6 +4,7 @@ import Navigation from '../Navigation';
 import CardPost from '../CardPost';
 import InfoGroup from '../InfoGroup';
 import OnlineNow from '../OnlineNow';
+import CardCreatePost from '../CardCreatePost';
 
 const useStyle = makeStyles((theme) => ({
   root: {
@@ -19,6 +20,9 @@ const useStyle = makeStyles((theme) => ({
   postContainer: {
     paddingBottom: theme.spacing(5),
   },
+  createPostContainer: {
+    margin: theme.spacing(1, 0),
+  },
 }));
 
 function Group() {
@@ -27,18 +31,21 @@ function Group() {
     <Box>
       <Navigation />
       <Grid container xs={12} className={classes.root} direction="row">
-        <Grid item xs={3}>
+        <Grid item md={3}>
           <Paper variant="outlined">
             <InfoGroup />
           </Paper>
         </Grid>
-        <Grid item xs={6}>
+        <Grid item md={6}>
           <Box
             className={classes.mainContainer}
             display="flex"
             justifyContent="center"
           >
             <Paper className={classes.main} elevation={3}>
+              <Box className={classes.createPostContainer}>
+                <CardCreatePost />
+              </Box>{' '}
               <Box className={classes.postContainer}>
                 <CardPost />
               </Box>
@@ -54,7 +61,7 @@ function Group() {
             </Paper>
           </Box>
         </Grid>
-        <Grid item xs={3}>
+        <Grid item md={3}>
           <Paper variant="outlined">
             <OnlineNow />
           </Paper>
