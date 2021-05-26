@@ -16,9 +16,6 @@ import { GoCommentDiscussion } from 'react-icons/go';
 import { IoSend } from 'react-icons/io5';
 const useStyle = makeStyles((theme) => ({
   root: {
-    //remove
-    margin: theme.spacing(10),
-    ////////////////
     width: 'min-content',
   },
   headSection: {
