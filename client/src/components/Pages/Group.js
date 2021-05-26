@@ -10,10 +10,11 @@ const useStyle = makeStyles((theme) => ({
     marginTop: theme.spacing(10),
   },
   mainContainer: {
-    backgroundColor: theme.palette.grey[200],
+    backgroundColor: theme.palette.grey[300],
   },
   main: {
-    padding: theme.spacing(0, 1),
+    padding: theme.spacing(3, 8),
+    margin: theme.spacing(0, 15),
   },
   postContainer: {
     paddingBottom: theme.spacing(5),
