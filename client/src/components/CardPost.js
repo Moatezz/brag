@@ -29,12 +29,14 @@ const useStyle = makeStyles((theme) => ({
   },
 
   contentSection: {},
-  InteractionsSection: {
-    voting: {},
+  interactionsSection: {
+    votes: {},
+    recentInteractionsContainer: {},
     recentInteractions: {},
     comments: {},
     share: {},
   },
+
   commentingSection: {
     avatar: {},
     textField: {},
@@ -70,7 +72,7 @@ function CardPost() {
       </Box>
       <Divider />
       <Box className={classes.interactionsSection} display="flex">
-        <Box className={classes.interactionsSection.voting} display="flex">
+        <Box className={classes.interactionsSection.votes} display="flex">
           <IconButton>
             <BiDownvote />
           </IconButton>
@@ -99,14 +101,14 @@ function CardPost() {
           <RiShareLine />
         </IconButton>
       </Box>
-      <Box className={classes.commentSection.commentingSection} display="flex">
-        <Avatar className={classes.commentSection.avatar}>U</Avatar>
+      <Box className={classes.commentingSection} display="flex">
+        <Avatar className={classes.commentingSection.avatar}>U</Avatar>
         <TextField
-          className={classes.commentSection.TextField}
+          className={classes.commentingSection.textField}
           variant="outlined"
           helperText="Comment something..."
         />
-        <IconButton className={classes.commentSection.submit}>
+        <IconButton className={classes.commentingSection.submit}>
           <IoSend />
         </IconButton>
       </Box>
