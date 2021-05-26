@@ -10,17 +10,19 @@ function InfoGroup() {
   };
   return (
     <Box>
-      <Tabs
-        value={value}
-        onChange={handleChange}
-        indicatorColor="primary"
-        textColor="primary"
-        centered
-      >
-        <Tab label="Overview" />
-        <Tab label="Rules" />
-        <Tab label="About" />
-      </Tabs>
+      <Box>
+        <Tabs
+          value={value}
+          onChange={handleChange}
+          indicatorColor="primary"
+          textColor="primary"
+          centered
+        >
+          <Tab label="Overview" />
+          <Tab label="Rules" />
+          <Tab label="About" />
+        </Tabs>
+      </Box>
       <InfoGroupOverview />
     </Box>
   );
