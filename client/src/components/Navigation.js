@@ -46,7 +46,7 @@ function Navigation() {
               <RiHome4Line className={classes.icons} />
             </IconButton>
             {/* Profile */}
-            <Profile class={classes.icons} />
+            <Profile className={classes.icons} />
             {/* Notifications */}
             <Notification className={classes.icons} />
 
