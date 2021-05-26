@@ -13,6 +13,7 @@ import {
 import { RiShareLine } from 'react-icons/ri';
 import { BiDownvote, BiUpvote } from 'react-icons/bi';
 import { GoCommentDiscussion } from 'react-icons/go';
+import { IoSend } from 'react-icons/io5';
 const useStyle = makeStyles((theme) => ({
   root: {
     //remove
@@ -20,21 +21,23 @@ const useStyle = makeStyles((theme) => ({
     width: 'min-content',
     padding: theme.spacing(1),
   },
-  head: {
+  headSection: {
     avatar: {},
     nameContainer: {},
+    name: {},
+    date: {},
   },
 
-  body: {},
-  bottom: {
+  contentSection: {},
+  InteractionsSection: {
     voting: {},
     recentInteractions: {},
     comments: {},
-    sharing: {},
+    share: {},
   },
-  comment: {
+  commentingSection: {
     avatar: {},
-    textSield: {},
+    textField: {},
     submit: {},
   },
 }));
@@ -42,44 +45,70 @@ function CardPost() {
   const classes = useStyle();
   return (
     <Paper variant="outlined" className={classes.root}>
-      <Box className={classes.head} display="flex">
-        <Avatar>U</Avatar>
-        <Box className={classes.nameContainer}>
-          <Typography>JamesMay24</Typography>
-          <Typography>14 Hours ago</Typography>
+      <Box className={classes.headSection} display="flex">
+        <Avatar className={classes.headSection.avatar}>U</Avatar>
+        <Box className={classes.headSection.nameContainer}>
+          <Typography className={classes.headSection.name}>
+            JamesMay24
+          </Typography>
+          <Typography className={classes.headSection.date}>
+            14 Hours ago
+          </Typography>
         </Box>
         <DottedMenu />
       </Box>
       <Divider />
-      <Box className={classes.body}>
+      <Box className={classes.ContentSection}>
         <Typography>
-          aornsitniearntiesrntiesntiestn sentisentiesntiesntstnseintsyntis
-          istnisntisntnnsientniesntisnntinsin snitnisnientinisentniesntiensin
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book. It has survived not only
+          five centuries, but also the leap into electronic typesetting,
+          remaining essentially unchanged. It was in the 1960s with the
         </Typography>
       </Box>
       <Divider />
-      <Box className={classes.bottom} display="flex">
-        <IconButton>
-          <BiDownvote />
-        </IconButton>
-        <IconButton>
-          <BiUpvote />
-        </IconButton>
+      <Box className={classes.interactionsSection} display="flex">
+        <Box className={classes.interactionsSection.voting} display="flex">
+          <IconButton>
+            <BiDownvote />
+          </IconButton>
+          <IconButton>
+            <BiUpvote />
+          </IconButton>
+        </Box>
+        <Box
+          className={classes.interactionsSection.recentInteractionsContainer}
+        >
+          <Avatar className={classes.interactionsSection.recentInteractions}>
+            u
+          </Avatar>
+          <Avatar className={classes.interactionsSection.recentInteractions}>
+            u
+          </Avatar>
+          <Avatar className={classes.interactionsSection.recentInteractions}>
+            u
+          </Avatar>
+        </Box>
 
-        <Avatar>u</Avatar>
-        <Avatar>u</Avatar>
-        <Avatar>u</Avatar>
-
-        <IconButton>
+        <IconButton className={classes.interactionsSection.comments}>
           <GoCommentDiscussion />
         </IconButton>
-        <IconButton>
+        <IconButton className={classes.interactionsSection.share}>
           <RiShareLine />
         </IconButton>
       </Box>
-      <Box className={classes.comment} display="flex">
-        <Avatar>U</Avatar>
-        <TextField variant="outlined" helperText="Comment something..." />
+      <Box className={classes.commentSection.commentingSection} display="flex">
+        <Avatar className={classes.commentSection.avatar}>U</Avatar>
+        <TextField
+          className={classes.commentSection.TextField}
+          variant="outlined"
+          helperText="Comment something..."
+        />
+        <IconButton className={classes.commentSection.submit}>
+          <IoSend />
+        </IconButton>
       </Box>
     </Paper>
   );
