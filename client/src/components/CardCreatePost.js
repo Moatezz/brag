@@ -9,6 +9,7 @@ import {
   Dialog,
   DialogTitle,
   DialogContent,
+  Typography,
 } from '@material-ui/core';
 import React, { useState } from 'react';
 const useStyle = makeStyles((theme) => ({
@@ -35,6 +36,23 @@ const useStyle = makeStyles((theme) => ({
   bottom: { backgroundColor: theme.palette.grey[200] },
   button: {
     margin: theme.spacing(1),
+  },
+  avatarDialog: {
+    height: theme.spacing(7),
+    width: theme.spacing(7),
+    margin: theme.spacing(0, 2, 2, 2),
+  },
+  mainDialog: {
+    margin: theme.spacing(2),
+  },
+  nameDialog: {
+    marginBottom: theme.spacing(2),
+    fontFamily: 'Cairo',
+    color: theme.palette.grey[700],
+    fontSize: theme.spacing(2.5),
+  },
+  submit: {
+    margin: theme.spacing(2, 2),
   },
 }));
 function CardCreatePost() {
@@ -75,9 +93,50 @@ function CardCreatePost() {
           <Button className={classes.button}>Filler</Button>
         </Box>
       </Paper>
-      <Dialog onClose={handleClose} open={open}>
-        <DialogTitle id="simple-dialog-title">Set backup account</DialogTitle>
-        <DialogContent>Hi there</DialogContent>
+      <Dialog
+        className={classes.dialog}
+        fullWidth
+        onClose={handleClose}
+        open={open}
+      >
+        <DialogTitle>Create a Post</DialogTitle>
+        <DialogContent>
+          <Paper className={classes.containerDialog} variant="outlined">
+            <Box
+              className={classes.mainDialog}
+              display="flex"
+              flexDirection="column"
+            >
+              <Box display="flex" alignItems="center">
+                <Avatar className={classes.avatarDialog}>M</Avatar>
+                <Typography className={classes.nameDialog}>Rcun54s</Typography>
+              </Box>
+              <TextField
+                className={classes.textFieldDialog}
+                variant="outlined"
+                onClick={handleClickOpen}
+                multiline
+                rows={10}
+              ></TextField>
+            </Box>
+            <Divider className={classes.dividerDialog} light />
+            <Box
+              className={classes.bottomDialog}
+              display="flex"
+              justifyContent="space-evenly"
+              alignItems="center"
+            >
+              <Button className={classes.buttonDialog}>Filler</Button>
+              <Button className={classes.buttonDialog}>Filler</Button>
+              <Button className={classes.buttonDialog}>Filler</Button>
+            </Box>
+            <Box className={classes.submit}>
+              <Button fullWidth variant="contained" color="primary">
+                Post
+              </Button>
+            </Box>
+          </Paper>
+        </DialogContent>
       </Dialog>
     </Box>
   );
