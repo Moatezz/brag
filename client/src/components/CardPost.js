@@ -94,7 +94,7 @@ const useStyle = makeStyles((theme) => ({
 function CardPost() {
   const classes = useStyle();
   return (
-    <Paper variant="outlined" className={classes.root}>
+    <Paper elevation={5} className={classes.root}>
       <Box className={classes.headSection} display="flex" alignItems="center">
         <Avatar className={classes.avatar}>U</Avatar>
         <Box
