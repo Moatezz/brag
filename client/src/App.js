@@ -1,10 +1,10 @@
-import Home from './components/Pages/Home';
+import Group from './components/Pages/Group';
 
 function App() {
   return (
     <>
       <div id="page">
-        <Home />
+        <Group />
       </div>
     </>
   );
