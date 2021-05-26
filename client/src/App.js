@@ -1,10 +1,10 @@
-import OnlineNow from './components/OnlineNow';
+import Group from './components/Pages/Group';
 
 function App() {
   return (
     <>
       <div id="page">
-        <OnlineNow />
+        <Group />
       </div>
     </>
   );
