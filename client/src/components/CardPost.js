@@ -44,10 +44,25 @@ const useStyle = makeStyles((theme) => ({
   interactionsSection: {},
   //children
   votes: {
-    width: 'min-content',
+    padding: 0,
   },
+  //children
+  upVote: {
+    fontSize: theme.spacing(4),
+  },
+  downVote: {
+    marginLeft: theme.spacing(-4),
+    marginTop: theme.spacing(2.5),
+    fontSize: theme.spacing(4),
+  },
+
   recentInteractionsContainer: {},
-  recentInteractions: {},
+  recentInteractions: {
+    marginLeft: theme.spacing(-1),
+    height: theme.spacing(4),
+    width: theme.spacing(4),
+    border: '2px solid' + theme.palette.common.white,
+  },
   comments: {},
   share: {},
   ////////////////
@@ -89,28 +104,45 @@ function CardPost() {
         </Typography>
       </Box>
       <Divider />
-      <Box className={classes.interactionsSection} display="flex">
+      <Box
+        className={classes.interactionsSection}
+        display="flex"
+        justifyContent="space-between"
+      >
         <Box className={classes.votes} display="flex">
-          <IconButton>
-            <BiDownvote />
-          </IconButton>
-          <IconButton>
+          <IconButton className={classes.upVote}>
             <BiUpvote />
           </IconButton>
+          <IconButton className={classes.downVote}>
+            <BiDownvote />
+          </IconButton>
         </Box>
-        <Box className={classes.recentInteractionsContainer} display="flex">
+        <Box
+          className={classes.recentInteractionsContainer}
+          display="flex"
+          alignItems="center"
+        >
           <Avatar className={classes.recentInteractions}>u</Avatar>
           <Avatar className={classes.recentInteractions}>u</Avatar>
           <Avatar className={classes.recentInteractions}>u</Avatar>
+          <Avatar className={classes.recentInteractions}>u</Avatar>
+          <Avatar className={classes.recentInteractions}>u</Avatar>
+          <Avatar className={classes.recentInteractions}>u</Avatar>
+          <Avatar className={classes.recentInteractions}>u</Avatar>
+          <Avatar className={classes.recentInteractions}>u</Avatar>
+          <Avatar className={classes.recentInteractions}>+</Avatar>
         </Box>
 
-        <IconButton className={classes.comments}>
-          <GoCommentDiscussion />
-        </IconButton>
-        <IconButton className={classes.share}>
-          <RiShareLine />
-        </IconButton>
+        <Box display="flex" alignItem="center">
+          <IconButton className={classes.comments}>
+            <GoCommentDiscussion />
+          </IconButton>
+          <IconButton className={classes.share}>
+            <RiShareLine />
+          </IconButton>
+        </Box>
       </Box>
+      <Divider />
       <Box className={classes.commentingSection} display="flex">
         <Avatar className={classes.avatarComment}>U</Avatar>
         <TextField
