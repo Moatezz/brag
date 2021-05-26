@@ -1,10 +1,10 @@
-import InfoGroupOverview from './components/InfoGroupOverview';
+import InfoGroupRules from './components/InfoGroupRules';
 
 function App() {
   return (
     <>
       <div id="page">
-        <InfoGroupOverview />
+        <InfoGroupRules />
       </div>
     </>
   );
