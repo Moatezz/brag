@@ -20,23 +20,32 @@ const useStyle = makeStyles((theme) => ({
     margin: theme.spacing(10),
     ////////////////
     width: 'min-content',
-    padding: theme.spacing(1),
   },
   headSection: {},
   //children
   avatar: {
     height: theme.spacing(8),
     width: theme.spacing(8),
+    margin: theme.spacing(1),
   },
-  nameContainer: {},
+  nameContainer: {
+    marginRight: theme.spacing(30),
+  },
   //children
   name: {},
-  date: {},
-  contentSection: {},
+  date: {
+    marginTop: theme.spacing(1),
+    fontSize: theme.spacing(1.4),
+  },
+  contentSection: {
+    margin: theme.spacing(2),
+  },
   ////////////////
   interactionsSection: {},
   //children
-  votes: {},
+  votes: {
+    width: 'min-content',
+  },
   recentInteractionsContainer: {},
   recentInteractions: {},
   comments: {},
@@ -54,14 +63,22 @@ function CardPost() {
     <Paper variant="outlined" className={classes.root}>
       <Box className={classes.headSection} display="flex">
         <Avatar className={classes.avatar}>U</Avatar>
-        <Box className={classes.nameContainer}>
+        <Box
+          className={classes.nameContainer}
+          display="flex"
+          flexDirection="column"
+          justifyContent="center"
+        >
           <Typography className={classes.name}>JamesMay24</Typography>
           <Typography className={classes.date}>14 Hours ago</Typography>
         </Box>
-        <DottedMenu />
+        <Box display="flex" alignItems="center">
+          {' '}
+          <DottedMenu />
+        </Box>
       </Box>
       <Divider />
-      <Box className={classes.ContentSection}>
+      <Box className={classes.contentSection}>
         <Typography>
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
