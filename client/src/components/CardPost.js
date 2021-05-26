@@ -16,7 +16,7 @@ import { GoCommentDiscussion } from 'react-icons/go';
 import { IoSend } from 'react-icons/io5';
 const useStyle = makeStyles((theme) => ({
   root: {
-    width: 'min-content',
+    width: 'fit-content',
   },
   headSection: {
     backgroundColor: theme.palette.grey[300],
