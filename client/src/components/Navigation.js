@@ -9,13 +9,13 @@ import {
   Toolbar,
 } from '@material-ui/core';
 //Icons
-import { BsFillInboxFill } from 'react-icons/bs';
 import { RiHome4Line } from 'react-icons/ri';
 import { TiGroupOutline } from 'react-icons/ti';
 import { GoSettings } from 'react-icons/go';
 import { BiLogOutCircle } from 'react-icons/bi';
 import Notification from './Notification';
 import Profile from './Profile';
+import Inbox from './Pages/Inbox';
 
 const useStyle = makeStyles((theme) => ({
   icons: {
@@ -49,15 +49,13 @@ function Navigation() {
             <Profile className={classes.icons} />
             {/* Notifications */}
             <Notification className={classes.icons} />
-
             {/* Groups */}
             <IconButton>
               <TiGroupOutline className={classes.icons} />
             </IconButton>
             {/* Inbox */}
-            <IconButton>
-              <BsFillInboxFill className={classes.icons} />
-            </IconButton>
+            <Inbox className={classes.icons} />
+
             {/* Settings */}
             <IconButton>
               <GoSettings className={classes.icons} />
