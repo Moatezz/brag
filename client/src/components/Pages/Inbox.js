@@ -15,6 +15,10 @@ import {
 } from '@material-ui/core';
 import { BsFillInboxFill } from 'react-icons/bs';
 import { RiMailAddFill } from 'react-icons/ri';
+import { BsReply } from 'react-icons/bs';
+import { BiTrash } from 'react-icons/bi';
+import { RiShareLine } from 'react-icons/ri';
+
 import DottedMenu from '../DottedMenu';
 const useStyle = makeStyles((theme) => ({
   root: {},
@@ -156,9 +160,15 @@ function Inbox({ className }) {
                     justifyContent="center"
                   >
                     <ButtonGroup>
-                      <Button>Reply</Button>
-                      <Button>share</Button>
-                      <Button>Delete</Button>
+                      <IconButton>
+                        <BsReply />
+                      </IconButton>
+                      <IconButton>
+                        <RiShareLine />
+                      </IconButton>
+                      <IconButton>
+                        <BiTrash />
+                      </IconButton>
                     </ButtonGroup>
                   </Box>
                 </Box>
