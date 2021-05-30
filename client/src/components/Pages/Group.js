@@ -1,6 +1,5 @@
 import { Grid, makeStyles, Paper, Box } from '@material-ui/core';
 import React from 'react';
-import Navigation from '../Navigation';
 import CardPost from '../CardPost';
 import InfoGroup from '../InfoGroup';
 import OnlineNow from '../OnlineNow';
