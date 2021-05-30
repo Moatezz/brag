@@ -9,7 +9,7 @@ function App() {
   }, [media]);
   return (
     <>
-      <div id="page">
+      <div id="pageContainerX">
         <Group />
       </div>
     </>
