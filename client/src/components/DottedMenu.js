@@ -19,12 +19,16 @@ const useStyle = makeStyles((theme) => ({
   button: {
     margin: theme.spacing(0.5, 0),
   },
+  content: {
+    width: 'content',
+  },
 }));
 export function Description() {
+  const classes = useStyle();
   return (
-    <Typography>
-      dhashdiaendioatnd asrit nairnti rss sssf ss earnst aitnsi etn isetn asrit
-      nairnti earnst aitnsi etn isetn
+    <Typography className={classes.content}>
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      Lorem Ipsum has been the industry's standard dummy text ever since the
     </Typography>
   );
 }

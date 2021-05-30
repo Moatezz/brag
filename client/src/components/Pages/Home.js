@@ -14,7 +14,6 @@ const useStyle = makeStyles((theme) => ({
   },
   grid: {
     marginTop: theme.spacing(4),
-    width: 'max-content',
   },
 }));
 
@@ -44,56 +43,47 @@ function Home() {
       <Grid
         className={classes.grid}
         container
-        spacing={2}
         justify="space-around"
+        alignItems="center"
       >
-        <Grid item>
+        <Grid item md={2}>
           <CardGroup />
         </Grid>
-        <Grid item>
+        <Grid item md={2}>
           <CardGroup />
         </Grid>
-        <Grid item>
+        <Grid item md={2}>
           <CardGroup />
         </Grid>
-        <Grid item>
+        <Grid item md={2}>
           <CardGroup />
         </Grid>
-        <Grid item>
+        <Grid item md={2}>
           <CardGroup />
         </Grid>
-        <Grid item>
+        <Grid item md={2}>
           <CardGroup />
         </Grid>
-        <Grid item>
+        <Grid item md={2}>
           <CardGroup />
         </Grid>
-        <Grid item>
+        <Grid item md={2}>
+          <CardGroup />
+        </Grid>
+        <Grid item md={2}>
+          <CardGroup />
+        </Grid>
+        <Grid item md={2}>
+          <CardGroup />
+        </Grid>
+        <Grid item md={2}>
+          <CardGroup />
+        </Grid>
+        <Grid item md={2}>
           <CardGroup />
         </Grid>
 
-        <Grid item>
-          <CardGroup />
-        </Grid>
-        <Grid item>
-          <CardGroup />
-        </Grid>
-        <Grid item>
-          <CardGroup />
-        </Grid>
-        <Grid item>
-          <CardGroup />
-        </Grid>
-        <Grid item>
-          <CardGroup />
-        </Grid>
-        <Grid item>
-          <CardGroup />
-        </Grid>
-        <Grid item>
-          <CardGroup />
-        </Grid>
-        <Grid item>
+        <Grid item md={2}>
           <CardGroup />
         </Grid>
       </Grid>
