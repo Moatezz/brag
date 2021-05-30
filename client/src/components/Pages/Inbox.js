@@ -11,7 +11,6 @@ import {
   Paper,
   Grid,
   ButtonGroup,
-  Button,
 } from '@material-ui/core';
 import { BsFillInboxFill } from 'react-icons/bs';
 import { RiMailAddFill } from 'react-icons/ri';
