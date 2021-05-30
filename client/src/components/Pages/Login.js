@@ -1,4 +1,6 @@
 import React from 'react';
+import { render } from 'react-dom';
+import Signup from './Signup';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
@@ -11,6 +13,7 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Logo from '../Logo';
+import Home from './Home';
 
 function Copyright() {
   return (
@@ -49,7 +52,12 @@ const useStyles = makeStyles((theme) => ({
 
 function Login() {
   const classes = useStyles();
-
+  const routeSignup = () => {
+    render(<Signup />, document.getElementById('pageContainerX'));
+  };
+  const routeHome = () => {
+    render(<Home />, document.getElementById('pageContainerX'));
+  };
   return (
     <Container component="main" maxWidth="xs">
       <CssBaseline />
@@ -93,6 +101,7 @@ function Login() {
             variant="contained"
             color="primary"
             className={classes.submit}
+            onClick={routeHome}
           >
             Sign In
           </Button>
@@ -103,9 +112,10 @@ function Login() {
               </Link>
             </Grid>
             <Grid item>
-              <Link href="#" variant="body2">
-                {"Don't have an account? Sign Up"}
-              </Link>
+              <Typography>
+                Don't have an account?
+                <Link onClick={routeSignup}>Sign up</Link>
+              </Typography>
             </Grid>
           </Grid>
         </form>

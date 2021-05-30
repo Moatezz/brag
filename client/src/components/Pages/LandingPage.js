@@ -1,5 +1,8 @@
 import React from 'react';
-import { Box, Button, makeStyles, Typography } from '@material-ui/core';
+import Login from './Login';
+import Signup from './Signup';
+import { render } from 'react-dom';
+import { Box, Button, Link, makeStyles, Typography } from '@material-ui/core';
 import Logo from '../Logo';
 
 const useStyle = makeStyles((theme) => ({
@@ -29,6 +32,12 @@ const useStyle = makeStyles((theme) => ({
 
 function LandingPage() {
   const classes = useStyle();
+  const routeLogin = () => {
+    render(<Login />, document.getElementById('pageContainerX'));
+  };
+  const routeSignup = () => {
+    render(<Signup />, document.getElementById('pageContainerX'));
+  };
   return (
     <Box
       className={classes.root}
@@ -48,12 +57,17 @@ function LandingPage() {
         algeria
       </Typography>
       <Box boxShadow={2} className={classes.container} marginTop={10}>
-        <Button variant="outlined" color="default" className={classes.button}>
+        <Button
+          variant="outlined"
+          color="default"
+          className={classes.button}
+          onClick={routeSignup}
+        >
           SIGN UP
         </Button>
       </Box>
       <Typography className={classes.typography}>
-        You have an account? Sign In
+        You have an account? <Link onClick={routeLogin}>Sign In</Link>
       </Typography>
     </Box>
   );
