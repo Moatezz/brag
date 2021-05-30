@@ -6,14 +6,7 @@ import CardGroup from '../CardGroup';
 
 const useStyle = makeStyles((theme) => ({
   root: {
-    flexGrow: 1,
-    marginTop: theme.spacing(9),
-    [theme.breakpoints.down('md')]: {
-      marginTop: theme.spacing(12),
-    },
-  },
-  grid: {
-    marginTop: theme.spacing(4),
+    marginBottom: theme.spacing(3),
   },
 }));
 
@@ -25,7 +18,7 @@ function Home() {
     setValue(newValue);
   };
   return (
-    <Box>
+    <>
       <Navigation />
       <Paper className={classes.root}>
         <Tabs
@@ -40,54 +33,34 @@ function Home() {
           <Tab label="Public" />
         </Tabs>
       </Paper>
-      <Grid
-        className={classes.grid}
-        container
-        justify="space-around"
-        alignItems="center"
-      >
-        <Grid item md={2}>
-          <CardGroup />
-        </Grid>
-        <Grid item md={2}>
-          <CardGroup />
-        </Grid>
-        <Grid item md={2}>
-          <CardGroup />
-        </Grid>
-        <Grid item md={2}>
-          <CardGroup />
-        </Grid>
-        <Grid item md={2}>
-          <CardGroup />
-        </Grid>
-        <Grid item md={2}>
-          <CardGroup />
-        </Grid>
-        <Grid item md={2}>
-          <CardGroup />
-        </Grid>
-        <Grid item md={2}>
-          <CardGroup />
-        </Grid>
-        <Grid item md={2}>
-          <CardGroup />
-        </Grid>
-        <Grid item md={2}>
-          <CardGroup />
-        </Grid>
-        <Grid item md={2}>
-          <CardGroup />
-        </Grid>
-        <Grid item md={2}>
-          <CardGroup />
-        </Grid>
+      <Box display="flex" flexWrap="wrap" justifyContent="space-around">
+        <CardGroup />
 
-        <Grid item md={2}>
-          <CardGroup />
-        </Grid>
-      </Grid>
-    </Box>
+        <CardGroup />
+
+        <CardGroup />
+
+        <CardGroup />
+
+        <CardGroup />
+
+        <CardGroup />
+
+        <CardGroup />
+
+        <CardGroup />
+
+        <CardGroup />
+
+        <CardGroup />
+
+        <CardGroup />
+
+        <CardGroup />
+
+        <CardGroup />
+      </Box>
+    </>
   );
 }
 

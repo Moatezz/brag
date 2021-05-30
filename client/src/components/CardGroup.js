@@ -12,8 +12,9 @@ import DottedMenu, { Description } from './DottedMenu';
 
 const useStyle = makeStyles((theme) => ({
   root: {
-    width: 'min-content',
+    width: theme.spacing(35),
     marginBottom: theme.spacing(3),
+    marginRight: theme.spacing(3),
   },
   topContainer: {
     backgroundColor: theme.palette.grey[300],

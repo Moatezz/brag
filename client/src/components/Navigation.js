@@ -51,7 +51,7 @@ function Navigation() {
   };
   const classes = useStyle();
   return (
-    <AppBar>
+    <AppBar position="sticky">
       <Toolbar>
         <Grid container>
           <Grid item>
