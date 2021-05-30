@@ -44,7 +44,6 @@ function Home() {
       <Grid
         className={classes.grid}
         container
-        xs={12}
         spacing={2}
         justify="space-around"
       >
