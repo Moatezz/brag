@@ -150,7 +150,7 @@ function CardPost() {
           <Avatar className={classes.recentInteractions}>+</Avatar>
         </Box>
 
-        <Box display="flex" alignItem="center">
+        <Box display="flex" alignItems="center">
           <IconButton className={classes.comments}>
             <GoCommentDiscussion />
           </IconButton>

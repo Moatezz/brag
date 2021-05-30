@@ -56,7 +56,7 @@ function Notification(props) {
         <MenuItem>
           <Paper variant="outlined" className={classes.container}>
             <Grid
-              justifyContent="space-between"
+              justify="space-between"
               alignItems="center"
               container
               spacing={2}
