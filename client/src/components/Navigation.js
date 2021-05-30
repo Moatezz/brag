@@ -1,4 +1,9 @@
 import React from 'react';
+import { render } from 'react-dom';
+//Pages
+import Home from './Pages/Home';
+import Group from './Pages/Group';
+import LandingPage from './Pages/LandingPage';
 //Material UI
 import {
   AppBar,
@@ -35,14 +40,23 @@ const useStyle = makeStyles((theme) => ({
 }));
 
 function Navigation() {
+  const routeHome = () => {
+    render(<Home />, document.getElementById('pageContainerX'));
+  };
+  const routeLandingPage = () => {
+    render(<LandingPage />, document.getElementById('pageContainerX'));
+  };
+  const routeGroup = () => {
+    render(<Group />, document.getElementById('pageContainerX'));
+  };
   const classes = useStyle();
   return (
-    <AppBar>
+    <AppBar position="sticky">
       <Toolbar>
         <Grid container>
           <Grid item>
             {/* Home */}
-            <IconButton>
+            <IconButton onClick={routeHome}>
               <RiHome4Line className={classes.icons} />
             </IconButton>
             {/* Profile */}
@@ -50,7 +64,7 @@ function Navigation() {
             {/* Notifications */}
             <Notification className={classes.icons} />
             {/* Groups */}
-            <IconButton>
+            <IconButton onClick={routeGroup}>
               <TiGroupOutline className={classes.icons} />
             </IconButton>
             {/* Inbox */}
@@ -68,7 +82,7 @@ function Navigation() {
             <InputBase className={classes.search} placeholder="Search..." />
           </Grid>
           <Grid item>
-            <IconButton>
+            <IconButton onClick={routeLandingPage}>
               <BiLogOutCircle className={classes.icons} />
             </IconButton>
           </Grid>

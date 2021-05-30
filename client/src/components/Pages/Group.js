@@ -1,6 +1,7 @@
-import { Grid, makeStyles, Paper, Box } from '@material-ui/core';
 import React from 'react';
 import Navigation from '../Navigation';
+import { Grid, makeStyles, Paper, Box } from '@material-ui/core';
+
 import CardPost from '../CardPost';
 import InfoGroup from '../InfoGroup';
 import OnlineNow from '../OnlineNow';
@@ -28,9 +29,10 @@ const useStyle = makeStyles((theme) => ({
 function Group() {
   const classes = useStyle();
   return (
-    <Box>
+    <>
       <Navigation />
-      <Grid container xs={12} className={classes.root} direction="row">
+
+      <Grid container className={classes.root} direction="row">
         <Grid item md={3}>
           <Paper variant="outlined">
             <InfoGroup />
@@ -67,7 +69,7 @@ function Group() {
           </Paper>
         </Grid>
       </Grid>
-    </Box>
+    </>
   );
 }
 

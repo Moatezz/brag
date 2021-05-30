@@ -6,15 +6,7 @@ import CardGroup from '../CardGroup';
 
 const useStyle = makeStyles((theme) => ({
   root: {
-    flexGrow: 1,
-    marginTop: theme.spacing(9),
-    [theme.breakpoints.down('md')]: {
-      marginTop: theme.spacing(12),
-    },
-  },
-  grid: {
-    marginTop: theme.spacing(4),
-    width: 'max-content',
+    marginBottom: theme.spacing(3),
   },
 }));
 
@@ -26,7 +18,7 @@ function Home() {
     setValue(newValue);
   };
   return (
-    <Box>
+    <>
       <Navigation />
       <Paper className={classes.root}>
         <Tabs
@@ -41,64 +33,34 @@ function Home() {
           <Tab label="Public" />
         </Tabs>
       </Paper>
-      <Grid
-        className={classes.grid}
-        container
-        xs={12}
-        spacing={2}
-        justify="space-around"
-      >
-        <Grid item>
-          <CardGroup />
-        </Grid>
-        <Grid item>
-          <CardGroup />
-        </Grid>
-        <Grid item>
-          <CardGroup />
-        </Grid>
-        <Grid item>
-          <CardGroup />
-        </Grid>
-        <Grid item>
-          <CardGroup />
-        </Grid>
-        <Grid item>
-          <CardGroup />
-        </Grid>
-        <Grid item>
-          <CardGroup />
-        </Grid>
-        <Grid item>
-          <CardGroup />
-        </Grid>
+      <Box display="flex" flexWrap="wrap" justifyContent="space-around">
+        <CardGroup />
 
-        <Grid item>
-          <CardGroup />
-        </Grid>
-        <Grid item>
-          <CardGroup />
-        </Grid>
-        <Grid item>
-          <CardGroup />
-        </Grid>
-        <Grid item>
-          <CardGroup />
-        </Grid>
-        <Grid item>
-          <CardGroup />
-        </Grid>
-        <Grid item>
-          <CardGroup />
-        </Grid>
-        <Grid item>
-          <CardGroup />
-        </Grid>
-        <Grid item>
-          <CardGroup />
-        </Grid>
-      </Grid>
-    </Box>
+        <CardGroup />
+
+        <CardGroup />
+
+        <CardGroup />
+
+        <CardGroup />
+
+        <CardGroup />
+
+        <CardGroup />
+
+        <CardGroup />
+
+        <CardGroup />
+
+        <CardGroup />
+
+        <CardGroup />
+
+        <CardGroup />
+
+        <CardGroup />
+      </Box>
+    </>
   );
 }
 

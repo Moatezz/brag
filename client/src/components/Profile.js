@@ -48,8 +48,8 @@ function Profile({ className }) {
   const [state, dispatch] = useReducer((state) => !state, false);
   return (
     <>
-      <IconButton>
-        <CgProfile className={className} onClick={dispatch} />
+      <IconButton onClick={dispatch}>
+        <CgProfile className={className} />
       </IconButton>
       <Drawer anchor="left" open={state} onClose={dispatch}>
         <Paper className={classes.root} variant="outlined">
