@@ -29,7 +29,6 @@ function Group() {
   const classes = useStyle();
   return (
     <Box>
-      <Navigation />
       <Grid container className={classes.root} direction="row">
         <Grid item md={3}>
           <Paper variant="outlined">
