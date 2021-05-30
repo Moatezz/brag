@@ -8,9 +8,7 @@ import OnlineNow from '../OnlineNow';
 import CardCreatePost from '../CardCreatePost';
 
 const useStyle = makeStyles((theme) => ({
-  root: {
-    marginTop: theme.spacing(10),
-  },
+  root: {},
   mainContainer: {
     backgroundColor: theme.palette.grey[300],
   },
