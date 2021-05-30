@@ -40,15 +40,14 @@ const useStyle = makeStyles((theme) => ({
 }));
 
 function Navigation() {
-  const container = document.getElementById('page');
   const routeHome = () => {
-    render(<Home />, container);
+    render(<Home />, document.getElementById('pageContainerX'));
   };
   const routeLandingPage = () => {
-    render(<LandingPage />, container);
+    render(<LandingPage />, document.getElementById('pageContainerX'));
   };
   const routeGroup = () => {
-    render(<Group />, container);
+    render(<Group />, document.getElementById('pageContainerX'));
   };
   const classes = useStyle();
   return (
