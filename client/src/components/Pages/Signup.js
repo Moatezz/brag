@@ -1,4 +1,6 @@
 import React from 'react';
+import { render } from 'react-dom';
+import Login from './Login';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
@@ -48,7 +50,9 @@ const useStyles = makeStyles((theme) => ({
 }));
 function Signup() {
   const classes = useStyles();
-
+  const routeLogin = () => {
+    render(<Login />, document.getElementById('pageContainerX'));
+  };
   return (
     <Container component="main" maxWidth="xs">
       <CssBaseline />
@@ -115,9 +119,10 @@ function Signup() {
           </Button>
           <Grid container justify="flex-end">
             <Grid item>
-              <Link href="#" variant="body2">
-                Already have an account? Sign in
-              </Link>
+              <Typography href="#" variant="body2">
+                Already have an account?{' '}
+                <Link onClick={routeLogin}>Sign in</Link>
+              </Typography>
             </Grid>
           </Grid>
         </form>
